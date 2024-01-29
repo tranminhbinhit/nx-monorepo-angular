@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx serve nx-monorepo-ang port 42100",
+    "startTime": "2024-01-29T16:52:57.406Z",
+    "endTime": "2024-01-29T16:52:57.495Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "nx-monorepo-ang:serve:development",
+      "target": "serve",
+      "projectName": "nx-monorepo-ang",
+      "hash": "14423681083220772814",
+      "startTime": "2024-01-29T16:52:57.410Z",
+      "endTime": "2024-01-29T16:52:57.494Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}
