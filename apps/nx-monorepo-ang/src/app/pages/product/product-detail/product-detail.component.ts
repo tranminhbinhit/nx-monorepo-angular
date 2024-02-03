@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../../../services/user/user.service';
+import { UserModel } from '../../../models/user/user.model';
 
 @Component({
   selector: 'nx-monorepo-ang-product-detail',
@@ -10,6 +11,7 @@ import { UserService } from '../../../services/user/user.service';
   styleUrl: './product-detail.component.scss',
 })
 export class ProductDetailComponent implements OnInit {
+  userInfo: UserModel = {};
   constructor(private userService: UserService) {}
   ngOnInit(): void {
       this.getUserInfo();
@@ -17,7 +19,8 @@ export class ProductDetailComponent implements OnInit {
 
   getUserInfo(){
     var test = this.userService.getUserInfo().subscribe(m=> {
-      console.log(m);
+      this.userInfo = m?.result;
+      console.log(this.userInfo);
     });
     
   }
