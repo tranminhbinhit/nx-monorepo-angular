@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve nx-monorepo-ang --port 42100"
+    "start": "nx serve nx-monorepo-ang --port 4210"
   },
   "private": true,
   "dependencies": {

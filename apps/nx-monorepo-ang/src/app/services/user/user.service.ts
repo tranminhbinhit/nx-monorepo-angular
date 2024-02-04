@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { UserModel } from '../../models/user/user.model';
-import { RequestNodeService } from '../base/request-node.service';
+import { Observable, of, takeUntil } from 'rxjs';
+import { RequestNodeService } from '../request-node.service';
 import { NodeResponseModel } from '../../models/base/nodeResponse';
 
 @Injectable({
