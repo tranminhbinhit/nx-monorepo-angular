@@ -5,7 +5,7 @@ import { UserModel } from '../../models/user/user.model';
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService {
+export class WebUserService {
   private _userInfo$: BehaviorSubject<UserModel> = new BehaviorSubject({});
 
   userInfo = this._userInfo$.asObservable();

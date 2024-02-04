@@ -3,9 +3,7 @@ import { Observable, of, takeUntil } from 'rxjs';
 import { RequestNodeService } from '../request-node.service';
 import { NodeResponseModel } from '../../models/base/nodeResponse';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UserService {
 
   constructor(private requestNodeService: RequestNodeService) { }

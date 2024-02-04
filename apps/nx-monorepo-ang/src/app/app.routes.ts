@@ -8,5 +8,9 @@ export const appRoutes: Route[] = [
     {
         path: 'category',
         loadChildren: () => import('./pages/category/category.module').then(m=>m.CategoryModule)
+    },
+    {
+        path: 'user',
+        loadChildren: () => import('./pages/user/user.module').then(m=>m.UserModule)
     }
 ];
