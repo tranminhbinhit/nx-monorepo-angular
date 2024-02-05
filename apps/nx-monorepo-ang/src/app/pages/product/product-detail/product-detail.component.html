@@ -1,1 +1,5 @@
 <p>product-detail works!</p>
+<hr />
+{{productFacade.title$ | async}}
+<hr />
+<button (click)="onChangeTitleFromStore()">Change Title To Store</button>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
+import { ProductFacade } from "./state/product.facade";
 
 @Component({
   selector: "nx-monorepo-ang-product",
@@ -10,7 +11,7 @@ import { RouterModule } from "@angular/router";
   styleUrl: "./product.component.scss",
 })
 export class ProductComponent implements OnInit {
-  constructor() {}
+  constructor(public readonly productFacade: ProductFacade) {}
 
   ngOnInit(): void {
     

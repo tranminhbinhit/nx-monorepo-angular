@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductComponent } from './product.component';
+import { StoreModule } from '@ngrx/store';
+import * as fromproductReducer from './state/product.reducer';
+import { ProductFacade } from './state/product.facade';
 
 const route: Routes = [
   {
@@ -24,6 +27,12 @@ const route: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forChild(route)],
+  imports: [
+    CommonModule, 
+    RouterModule.forChild(route), 
+    StoreModule.forRoot({}),
+    StoreModule.forFeature(fromproductReducer.featureKey, fromproductReducer.reducer),
+  ],
+  providers: [ProductFacade]
 })
 export class ProductModule {}
